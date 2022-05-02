@@ -1,0 +1,38 @@
+:root {
+	--basic-green: #68B738;
+	--basic-green-transparent: rgba(104, 183, 56, 0.85);
+	--basic-grey: #F2F2F2;
+	transition: all 0.3s ease;
+  }
+  
+body {
+	font-family: "Arial", sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #000000;
+}
+
+body.lock {
+	overflow: hidden;
+}
+
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.container {
+	max-width: 1350px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+h2 {
+	font-family: "Oswald", sans-serif;
+	font-size: 60px;
+	line-height: 1;
+}

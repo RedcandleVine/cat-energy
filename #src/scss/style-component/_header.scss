@@ -1,0 +1,42 @@
+.header {
+  &.scrolled {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.main-nav {
+  &__list {
+    & a {
+      font-family: "Oswald", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+    }
+  }
+  &__item {
+    position: relative;
+    transition: all 0.3s ease;
+    &:hover {
+      &::before {
+        position: absolute;
+        content: "";
+        bottom: -8px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        border: 2px solid #fff;
+      }
+    }
+
+  }
+}
