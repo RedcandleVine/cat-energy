@@ -5,6 +5,7 @@
     z-index: 2;
     display: flex;
     align-items: center;
+
     &::before {
         position: absolute;
         content: "";
@@ -17,6 +18,7 @@
         width: 50%;
         z-index: -2;
     }
+
     &::after {
         position: absolute;
         content: "";
@@ -27,11 +29,13 @@
         width: 50%;
         z-index: -1;
     }
+
     &__wrapper {
         display: flex;
         align-items: center;
         justify-content: flex-start;
     }
+
     & .container {
         width: 100%;
     }
@@ -68,6 +72,46 @@
     }
 }
 
+@media (max-width: 1024px) {
+    .main-screen {
+        &::before {
+            display: none;
+        }
+
+        &::after {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .main-screen {
+        &::before {
+            display: none;
+        }
+
+        &::after {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .main-screen {
+        &__wrapper {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &__image-block {
+            align-self: center;
+        }
+
+    }
+}
+
+
+
 .service {
     &__wrapper {
         margin-top: 82px;
@@ -75,9 +119,11 @@
         gap: 80px;
         grid-template-columns: 1fr 1fr;
     }
+
     &__column {
         background-color: var(--basic-grey);
         padding: 47px 52px 60px 52px;
+
         &:first-child {
             & .service__icon {
                 &:before {
@@ -94,6 +140,7 @@
                 }
             }
         }
+
         &:last-child {
             & .service__icon {
                 &:before {
@@ -111,11 +158,13 @@
             }
         }
     }
+
     &__title-block {
         display: flex;
         align-items: center;
         margin-bottom: 40px;
     }
+
     &__icon {
         width: 100px;
         height: 100px;
@@ -125,16 +174,19 @@
         transition: all 0.3s ease;
         margin-right: 62px;
     }
+
     &__title {
         font-family: "Oswald", sans-serif;
         font-size: 36px;
         line-height: 1;
         text-transform: uppercase;
     }
+
     &__descr {
         display: block;
         margin-bottom: 27px;
     }
+
     &__link {
         display: inline-block;
         font-family: "Oswald", sans-serif;
@@ -143,6 +195,7 @@
         position: relative;
 
         color: #000;
+
         &:before {
             position: absolute;
             content: "";
@@ -156,9 +209,10 @@
             transform: translate(-50%, -50%);
             transition: all 0.3s ease;
         }
+
         &:hover {
             &:before {
-                right: -65px; 
+                right: -65px;
             }
         }
     }
@@ -168,17 +222,21 @@
     &__wrapper {
         margin-top: 70px;
     }
+
     &__row {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 80px;
     }
+
     &__title {
         margin-bottom: 70px;
     }
+
     &__column {
         position: relative;
         min-height: 280px;
+
         &:nth-child(1) {
             & .steps__icon {
                 &::before {
@@ -188,16 +246,18 @@
                 }
             }
         }
+
         &:nth-child(2) {
             & .steps__icon {
                 &::before {
                     background-image: url('../img/icon_tub.svg');
                     width: 29px;
                     height: 31px;
-                    
+
                 }
             }
         }
+
         &:nth-child(3) {
             & .steps__icon {
                 &::before {
@@ -207,6 +267,7 @@
                 }
             }
         }
+
         &:nth-child(4) {
             & .steps__icon {
                 &::before {
@@ -217,6 +278,7 @@
             }
         }
     }
+
     &__number {
         position: absolute;
         top: -39px;
@@ -227,12 +289,14 @@
         color: var(--basic-grey);
         z-index: -1;
     }
+
     &__icon {
         width: 80px;
         height: 80px;
         background: var(--basic-green);
         margin-bottom: 30px;
         position: relative;
+
         &:before {
             position: absolute;
             content: "";
@@ -243,5 +307,6 @@
             transform: translate(-50%, -50%);
         }
     }
+
     &__descr {}
 }
