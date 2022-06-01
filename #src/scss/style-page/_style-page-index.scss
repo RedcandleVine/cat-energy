@@ -74,6 +74,12 @@
 
 @media (max-width: 1024px) {
     .main-screen {
+        height: 80vh;
+        padding-top: 0;
+        margin-top: 100px;
+        display: flex;
+        align-items: flex-start;
+
         &::before {
             display: none;
         }
@@ -81,36 +87,81 @@
         &::after {
             display: none;
         }
-    }
-}
 
-@media (max-width: 480px) {
-    .main-screen {
-        &::before {
-            display: none;
-        }
-
-        &::after {
-            display: none;
-        }
-    }
-}
-
-@media (max-width: 768px) {
-    .main-screen {
         &__wrapper {
             flex-direction: column;
             align-items: flex-start;
+            position: relative;
         }
 
         &__image-block {
             align-self: center;
-        }
+            position: absolute;
+            z-index: -1;
+            top: 200px;
+            width: 100%;
 
+            & img {
+                width: 100%;
+            }
+        }
     }
 }
 
+@media (max-width: 650px) {
+    .main-screen {
 
+        &__wrapper {
+            height: 100%;
+        }
+
+        & .container {
+            padding-top: 27px;
+            height: 100%;
+        }
+
+        &__title {
+            font-size: 36px;
+            margin-bottom: 25px;
+        }
+
+        &__title-block {
+            width: 100%;
+            text-align: center;
+            position: relative;
+            margin-left: 0;
+            height: 100%;
+        }
+
+        &__sub-title,
+        &__link {
+            font-size: 14px;
+        }
+
+        &__link {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            max-width: none;
+        }
+
+        &::before,
+        &::after {
+            display: initial;
+            top: 0;
+            left: 0;
+            height: 50%;
+            width: 100%;
+            z-index: -2;
+        }
+
+        &::before {
+            background-image: url('../img/index-background-desktop-2.png');
+            background-position: center;
+        }
+    }
+}
 
 .service {
     &__wrapper {
@@ -214,6 +265,15 @@
             &:before {
                 right: -65px;
             }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .service {
+        &__wrapper {
+            margin-top: 40px;
+            gap: 40px;
         }
     }
 }

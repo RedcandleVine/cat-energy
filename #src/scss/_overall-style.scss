@@ -3,8 +3,8 @@
 	--basic-green-transparent: rgba(104, 183, 56, 0.85);
 	--basic-grey: #F2F2F2;
 	transition: all 0.3s ease;
-  }
-  
+}
+
 body {
 	font-family: "Arial", sans-serif;
 	font-style: normal;
@@ -26,9 +26,15 @@ body.lock {
 }
 
 .container {
-	max-width: 1350px;
+	max-width: 1320px;
 	margin: 0 auto;
-	padding: 0 15px;
+	padding: 0 30px;
+}
+
+@media (max-width: 480px) {
+	.container {
+		padding: 0 20px;
+	}
 }
 
 h2 {

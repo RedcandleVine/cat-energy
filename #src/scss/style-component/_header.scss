@@ -13,8 +13,18 @@
     justify-content: space-between;
   }
 
-  &__burger {
+  & .tablet-logo {
     display: none;
+  }
+
+}
+
+.mobile-header {
+  &__container {
+    display: none;
+  }
+
+  &__burger {
 
     & svg {
       vertical-align: middle;
@@ -78,12 +88,39 @@
   stroke-dashoffset: -64px;
 }
 
-@media (max-width: 480px) {
-  .main-nav {
+@media (max-width: 1024px) {
+  .desktop-logo {
     display: none;
   }
 
-  .header__burger {
+  .header .tablet-logo {
     display: initial;
+  }
+
+}
+
+@media (max-width: 1024px) {
+  .header.scrolled {
+    padding-top: 25px;
+  }
+}
+
+@media (max-width: 650px) {
+  .header.scrolled {
+    padding: 10px 0;
+  }
+
+  .header {
+    &__container {
+      display: none;
+    }
+  }
+
+  .mobile-header {
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 }
