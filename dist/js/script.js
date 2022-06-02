@@ -35,4 +35,6 @@ $(document).ready(function () {
         $("html").removeClass("lock");
     });
 
+    $("#example").twentytwenty();
+
 });
