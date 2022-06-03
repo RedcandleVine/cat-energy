@@ -35,7 +35,14 @@
 		position: relative;
 		transition: all 0.3s ease;
 
-		&:hover {
+		&:hover,
+		&:focus {
+			opacity: 0.8;
+		}
+
+		&:active {
+			opacity: 1;
+
 			&::before {
 				position: absolute;
 				content: "";
@@ -47,10 +54,14 @@
 			}
 		}
 
+		&:visited {
+			opacity: 0.6;
+		}
 	}
 
-	&__item.active {
+	&__item.current {
 		position: relative;
+		transition: 0.3s all ease;
 
 		&::before {
 			position: absolute;
@@ -62,13 +73,25 @@
 			border: 2px solid #fff;
 		}
 
+		&:hover,
+		&:focus {
+			opacity: 0.8;
+
+
+			&::before {
+				display: none;
+			}
+		}
+
+		&:visited {
+			opacity: 0.6;
+
+			&::before {
+				display: none;
+			}
+		}
+
 	}
-
-	&__link {}
-
-	&__submenu {}
-
-	&__subitem {}
 
 	&__sublink {
 		display: block;
@@ -123,7 +146,7 @@
 
 		}
 
-		&__item.active {
+		&__item.current {
 			&::before {
 				border: 2px solid var(--basic-green);
 			}

@@ -1,6 +1,7 @@
 :root {
 	--basic-green: #68B738;
 	--basic-green-transparent: rgba(104, 183, 56, 0.85);
+	--basic-green-dark: #519228;
 	--basic-grey: #F2F2F2;
 	--special-dark-grey: #444444;
 	--special-grey: #CDCDCD;
@@ -48,5 +49,45 @@ h2 {
 @media (max-width:650px) {
 	h2 {
 		font-size: 36px;
+	}
+}
+
+.desktop-logo,
+.tablet-logo,
+.mobile-logo,
+.mobile-logo-2,
+.footer__logo {
+	& a {
+		display: block;
+		transition: 0.3s all ease;
+
+		&:hover,
+		&:focus {
+			opacity: 0.8;
+		}
+
+		&:active {
+			opacity: 0.6;
+		}
+	}
+}
+
+
+.button-fade {
+	text-align: center;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	background-color: var(--basic-green);
+	transition: 0.3s all ease;
+
+	&:hover,
+	&:focus {
+		background-color: var(--basic-green-dark);
+	}
+
+	&:active {
+		& span {
+			opacity: 0.3;
+		}
 	}
 }
