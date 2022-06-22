@@ -121,4 +121,29 @@
       align-items: center;
     }
   }
+
+  .main-nav__item.current::before {
+    display: none;
+  }
+
+  .mm-panel {
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+
+    text-transform: uppercase;
+
+    color: #000000;
+  }
+
+  .mm-navbar__title>span {
+    color: #000000;
+    font-weight: 400;
+
+    & span {
+      font-weight: 500;
+    }
+  }
 }

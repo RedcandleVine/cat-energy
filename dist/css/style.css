@@ -384,7 +384,22 @@ h2 {
             justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; } }
+            align-items: center; }
+  .main-nav__item.current::before {
+    display: none; }
+  .mm-panel {
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #000000; }
+  .mm-navbar__title > span {
+    color: #000000;
+    font-weight: 400; }
+    .mm-navbar__title > span span {
+      font-weight: 500; } }
 
 .main-nav {
   padding: 15px 0; }

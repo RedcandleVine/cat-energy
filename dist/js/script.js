@@ -10,7 +10,7 @@ $(document).ready(function () {
     $("#menu").mmenu({
         extensions: ["pagedim-black", "position-left"],
         navbar: {
-            title: "Меню",
+            title: "<span>Cat</span> Energy",
         },
     });
 
@@ -35,6 +35,7 @@ $(document).ready(function () {
         $("html").removeClass("lock");
     });
 
+    //Activation before-after plugin
     $("#example").twentytwenty();
 
 });
