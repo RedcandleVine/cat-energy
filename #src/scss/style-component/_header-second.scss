@@ -1,0 +1,172 @@
+.header-second {
+    padding-bottom: 10px;
+
+    &.scrolled {
+        padding-top: 50px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    & .tablet-logo {
+        display: none;
+    }
+
+    & .main-nav__list {
+        a {
+            color: #111111;
+        }
+    }
+
+    & .main-nav__item {
+        &.current {
+            &::before {
+                border: 2px solid var(--basic-green);
+            }
+        }
+    }
+
+    & .main-nav__item {
+        &:active {
+            &::before {
+                border: 2px solid var(--basic-green);
+            }
+        }
+    }
+
+}
+
+.mobile-header {
+    &__container {
+        display: none;
+    }
+
+    &__burger {
+
+        & svg {
+            vertical-align: middle;
+        }
+    }
+}
+
+.ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.hamRotate.is-active {
+    transform: rotate(45deg);
+}
+
+.hamRotate180.is-active {
+    transform: rotate(180deg);
+}
+
+.line {
+    fill: none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: #14120b;
+    stroke-width: 3.5;
+    stroke-linecap: round;
+}
+
+.ham8 .top {
+    stroke-dasharray: 40 160;
+}
+
+.ham8 .middle {
+    stroke-dasharray: 40 142;
+    transform-origin: 50%;
+    transition: transform 400ms;
+}
+
+.ham8 .bottom {
+    stroke-dasharray: 40 85;
+    transform-origin: 50%;
+    transition: transform 400ms, stroke-dashoffset 400ms;
+}
+
+.ham8.is-active .top {
+    stroke-dashoffset: -64px;
+}
+
+.ham8.is-active .middle {
+    transform: rotate(90deg);
+}
+
+.ham8.is-active .bottom {
+    stroke-dashoffset: -64px;
+}
+
+@media (max-width: 1024px) {
+    .desktop-logo {
+        display: none;
+    }
+
+    .header .tablet-logo {
+        display: initial;
+    }
+
+}
+
+@media (max-width: 1024px) {
+    .header.scrolled {
+        padding-top: 25px;
+    }
+}
+
+@media (max-width: 650px) {
+    .header.scrolled {
+        padding: 10px 0;
+    }
+
+    .header {
+        &__container {
+            display: none;
+        }
+    }
+
+    .mobile-header {
+        &__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    .main-nav__item.current::before {
+        display: none;
+    }
+
+    .mm-panel {
+        font-family: 'Oswald', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 100%;
+
+        text-transform: uppercase;
+
+        color: #000000;
+    }
+
+    .mm-navbar__title>span {
+        color: #000000;
+        font-weight: 400;
+
+        & span {
+            font-weight: 500;
+        }
+    }
+}

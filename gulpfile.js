@@ -88,12 +88,12 @@ gulp.task("clean", function () {
 });
 
 gulp.task("watch", function () {
-	gulp.watch("#src/scss/style-plugin/*", gulp.parallel("cssPlugin"));
-	gulp.watch("#src/fonts/**/*", gulp.parallel("font"));
-	gulp.watch("#src/scss/**/*.scss", gulp.parallel("sass"));
-	gulp.watch("#src/**/*.html", gulp.parallel("html"));
-	gulp.watch("#src/js/*.js", gulp.parallel("js"));
-	gulp.watch("#src/img/**/*", gulp.parallel("img"));
+	gulp.watch("#src/scss/style-plugin/*", { usePolling: true }, gulp.parallel("cssPlugin"));
+	gulp.watch("#src/fonts/**/*", { usePolling: true }, gulp.parallel("font"));
+	gulp.watch("#src/scss/**/*.scss", { usePolling: true }, gulp.parallel("sass"));
+	gulp.watch("#src/**/*.html", { usePolling: true }, gulp.parallel("html"));
+	gulp.watch("#src/js/*.js", { usePolling: true }, gulp.parallel("js"));
+	gulp.watch("#src/img/**/*", { usePolling: true }, gulp.parallel("img"));
 });
 
 gulp.task("default", gulp.series("clean", gulp.parallel("html", "img", "font", "js", "sass", "cssPlugin", "watch", "browser-sync")));

@@ -1,0 +1,42 @@
+<section class="select">
+    <div class="container">
+        <div class="select__wrapper">
+            <div class="select__title">
+                <h2>Подбор программы</h2>
+                <div class="select__sub-title">Заполните анкету, и мы подберем <br>
+                    программу питания для вашего кота</div>
+            </div>
+            <form action="/action_page.php">
+                <fieldset>
+                    <div class="select__column">
+                        <label for="catname">ИМЯ:</label><br>
+                        <input type="text" id="catname" name="catname" placeholder="Барсик"><br>
+                        <label for="catweight">Вес (кг):</label><br>
+                        <input type="text" id="catweight" name="catweight" placeholder="7" pattern="[0-9]{2}">
+                    </div>
+                    <div class="select__column">
+                        <input type="radio" id="weight-loss" name="select__service" value="weight-loss">
+                        <label for="weight-loss">похудение</label>
+                        <input type="radio" id="weight-gain" name="select__service" value="weight-gain">
+                        <label for="weight-gain">Набор массы</label>
+                        <input type="radio" id="need-advise" name="select__service" value="need-advise">
+                        <label for="need-advise">Не знаю (Нужен ваш совет)</label>
+                    </div>
+
+                </fieldset>
+                <fieldset>
+                    <legend>Контактные данные (владельца кота)</legend>
+                    <div class="select__column">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="кuklachev@gmail.com" required>
+                    </div>
+                    <div class="select__column">
+                        <label for="telephone">Телефон:</label>
+                        <input type="tel" id="telephone" name="telephone" placeholder="8 (960) 900-60-90"
+                            pattern="8-([0-9]{3})-[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</section>

@@ -401,6 +401,145 @@ h2 {
     .mm-navbar__title > span span {
       font-weight: 500; } }
 
+.header-second {
+  padding-bottom: 10px; }
+  .header-second.scrolled {
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100; }
+  .header-second__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .header-second .tablet-logo {
+    display: none; }
+  .header-second .main-nav__list a {
+    color: #111111; }
+  .header-second .main-nav__item.current::before {
+    border: 2px solid var(--basic-green); }
+  .header-second .main-nav__item:active::before {
+    border: 2px solid var(--basic-green); }
+
+.mobile-header__container {
+  display: none; }
+
+.mobile-header__burger svg {
+  vertical-align: middle; }
+
+.ham {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transition: -webkit-transform 400ms;
+  transition: -webkit-transform 400ms;
+  -o-transition: transform 400ms;
+  transition: transform 400ms;
+  transition: transform 400ms, -webkit-transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.hamRotate.is-active {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg); }
+
+.hamRotate180.is-active {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg); }
+
+.line {
+  fill: none;
+  -webkit-transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  -o-transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke: #14120b;
+  stroke-width: 3.5;
+  stroke-linecap: round; }
+
+.ham8 .top {
+  stroke-dasharray: 40 160; }
+
+.ham8 .middle {
+  stroke-dasharray: 40 142;
+  -webkit-transform-origin: 50%;
+      -ms-transform-origin: 50%;
+          transform-origin: 50%;
+  -webkit-transition: -webkit-transform 400ms;
+  transition: -webkit-transform 400ms;
+  -o-transition: transform 400ms;
+  transition: transform 400ms;
+  transition: transform 400ms, -webkit-transform 400ms; }
+
+.ham8 .bottom {
+  stroke-dasharray: 40 85;
+  -webkit-transform-origin: 50%;
+      -ms-transform-origin: 50%;
+          transform-origin: 50%;
+  -webkit-transition: stroke-dashoffset 400ms, -webkit-transform 400ms;
+  transition: stroke-dashoffset 400ms, -webkit-transform 400ms;
+  -o-transition: transform 400ms, stroke-dashoffset 400ms;
+  transition: transform 400ms, stroke-dashoffset 400ms;
+  transition: transform 400ms, stroke-dashoffset 400ms, -webkit-transform 400ms; }
+
+.ham8.is-active .top {
+  stroke-dashoffset: -64px; }
+
+.ham8.is-active .middle {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg); }
+
+.ham8.is-active .bottom {
+  stroke-dashoffset: -64px; }
+
+@media (max-width: 1024px) {
+  .desktop-logo {
+    display: none; }
+  .header .tablet-logo {
+    display: initial; } }
+
+@media (max-width: 1024px) {
+  .header.scrolled {
+    padding-top: 25px; } }
+
+@media (max-width: 650px) {
+  .header.scrolled {
+    padding: 10px 0; }
+  .header__container {
+    display: none; }
+  .mobile-header__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .main-nav__item.current::before {
+    display: none; }
+  .mm-panel {
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #000000; }
+  .mm-navbar__title > span {
+    color: #000000;
+    font-weight: 400; }
+    .mm-navbar__title > span span {
+      font-weight: 500; } }
+
 .main-nav {
   padding: 15px 0; }
   .main-nav__list {
