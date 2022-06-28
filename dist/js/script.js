@@ -38,4 +38,8 @@ $(document).ready(function () {
     //Activation before-after plugin
     $("#example").twentytwenty();
 
+    //Activation phone-mask plugin
+    $("#telephone").mask("8 (999) 999-99-99");
+
+
 });

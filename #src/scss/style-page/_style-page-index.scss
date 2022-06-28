@@ -832,4 +832,123 @@
     }
 }
 
-.select {}
+.select {
+
+    // .select__wrapper
+
+    &__wrapper {
+        padding-top: 75px;
+        padding-bottom: 85px;
+    }
+
+    // .select__title
+
+    &__title {}
+
+    // .select__sub-title
+
+    & form {
+        padding-top: 65px;
+    }
+
+    &__sub-title {
+        padding-top: 50px;
+        width: 325px;
+        max-width: 100%;
+        font-family: 'Oswald', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 150%;
+        text-transform: uppercase;
+        color: #000000;
+    }
+
+    & fieldset {
+        display: flex;
+        padding-bottom: 70px;
+
+        &:last-child {
+            flex-direction: column;
+        }
+    }
+
+    & legend {
+        margin-bottom: 75px;
+        font-family: 'Oswald', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 100%;
+        color: #000000;
+        position: relative;
+        width: 100%;
+
+        &::before {
+            position: absolute;
+            content: "";
+            top: 50%;
+            transform: translate(50%, 0);
+            left: 0;
+            right: 0;
+            border: 2px solid var(--basic-green);
+        }
+    }
+
+    & label,
+    &::placeholder,
+    & input[type="number"],
+    & input[type="text"],
+    & input[type="email"],
+    & textarea {
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 150%;
+        text-transform: uppercase;
+        color: var(--special-dark-grey);
+    }
+
+
+
+    // .select__column
+
+    &__column {}
+
+    // .select__item
+
+    &__item {}
+
+    // .select__row
+
+    &__row {
+        display: flex;
+        width: 100%;
+    }
+}
+
+.container {}
+
+.select-important {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: "*";
+        font-family: 'Oswald', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: var(--special-dark-grey);
+        top: 0;
+        right: 0;
+        margin-right: -10px;
+    }
+}
+
+.email {}
+
+.telephone {}
