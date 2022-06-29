@@ -86,7 +86,7 @@
                     программу питания для вашего кота</div>
             </div>
             <form action="/action_page.php">
-                <fieldset>
+                <fieldset class="select__fieldset-basic">
                     <div class="select__column">
                         <div class="select__item">
                             <label for="catname" class="select-important">ИМЯ:</label>
@@ -103,23 +103,28 @@
                                 placeholder="7">
                         </div>
                     </div>
-                    <div class="select__column">
-                        <div class="select__item">
+                    <div class="select__column select__radio">
+                        <label for="weight-loss" class="radio-item">
                             <input type="radio" id="weight-loss" name="select__service" value="weight-loss"
                                 checked="checked">
-                            <label for="weight-loss">похудение</label>
-                        </div>
-                        <div class="select__item">
+                            <span class="radiomark"></span>
+                            <span class="select__radio-name">похудение</span>
+                        </label>
+
+                        <label for="weight-gain" class="radio-item">
                             <input type="radio" id="weight-gain" name="select__service" value="weight-gain">
-                            <label for="weight-gain">Набор массы</label>
-                        </div>
-                        <div class="select__item">
+                            <span class="radiomark"></span>
+                            <span class="select__radio-name">Набор массы</span>
+                        </label>
+
+                        <label for="need-advise" class="radio-item">
                             <input type="radio" id="need-advise" name="select__service" value="need-advise">
-                            <label for="need-advise">Не знаю (Нужен ваш совет)</label>
-                        </div>
+                            <span class="radiomark"></span>
+                            <span class="select__radio-name">Не знаю (Нужен ваш совет)</span>
+                        </label>
                     </div>
                 </fieldset>
-                <fieldset>
+                <fieldset class="select__fieldset-contacts">
                     <legend> <span>Контактные данные (владельца кота)</span> </legend>
                     <div class="select__column">
                         <label for="email" class="select-important">E-mail:</label>
@@ -132,37 +137,39 @@
                             placeholder="8 (960) 900-60-90" required>
                     </div>
                 </fieldset>
-                <fieldset>
+                <fieldset class="select__fieldset-comment">
                     <legend> <span>Комментарий</span> </legend>
                     <textarea placeholder="Расскажите обо всех повадках кота"></textarea>
                 </fieldset>
-                <fieldset>
+                <fieldset class="select__fieldset-additional">
                     <legend> <span>Дополнительно</span> </legend>
-                    <div class="select__row">
-                        <div class="select__item">
+                    <div class="select__row select__checkbox">
+                        <label for="sweetener" class="checkbox-item">
                             <input type="checkbox" id="sweetener" name="sweetener" value="sweetener"></input>
-                            <label for="sweetener">сахарозаменитель</label>
-                        </div>
-                        <div class="select__item">
+                            <span class="checkbox-mark"></span>
+                            <span class="select__checkbox-name">сахарозаменитель</span>
+                        </label>
+                        <label for="potable-water" class="checkbox-item">
                             <input type="checkbox" id="potable-water" name="potable-water"
                                 value="potable-water"></input>
-                            <label for="potable-water">питьевая вода</label>
-                        </div>
-                        <div class="select__item">
+                            <span class="checkbox-mark"></span>
+                            <span class="select__checkbox-name">питьевая вода</span>
+                        </label>
+                        <label for="milk" class="checkbox-item">
                             <input type="checkbox" id="milk" name="milk" value="milk"></input>
-                            <label for="milk">молоко</label>
-                        </div>
-                        <div class="select__item">
+                            <span class="checkbox-mark"></span>
+                            <span class="select__checkbox-name">молоко</span>
+                        </label>
+                        <label for="vitamins" class="checkbox-item">
                             <input type="checkbox" id="vitamins" name="vitamins" value="vitamins"></input>
-                            <label for="vitamins">витамины</label>
-                        </div>
+                            <span class="checkbox-mark"></span>
+                            <span class="select__checkbox-name">витамины</span>
+                        </label>
                     </div>
                     <div class="select__row">
                         <input type="submit" value="отправить заявку">
                         <span>* — Обязательные поля</span>
                     </div>
-
-
                 </fieldset>
             </form>
         </div>
