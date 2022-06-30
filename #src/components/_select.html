@@ -19,9 +19,8 @@
                                 placeholder="7">
                         </div>
                         <div class="select__item">
-                            <label for="catweight" class="select-important">Возраст (лет):</label>
-                            <input type="number" min="1" max="30" id="catweight" name="catweight" required
-                                placeholder="7">
+                            <label for="catage" class="select-important">Возраст (лет):</label>
+                            <input type="number" min="1" max="30" id="catage" name="catage" required placeholder="7">
                         </div>
                     </div>
                     <div class="select__column select__radio">
@@ -47,15 +46,19 @@
                 </fieldset>
                 <fieldset class="select__fieldset-contacts">
                     <legend> <span>Контактные данные (владельца кота)</span> </legend>
-                    <div class="select__column">
-                        <label for="email" class="select-important">E-mail:</label>
-                        <input type="email" id="email" name="email" class="email" placeholder="кuklachev@gmail.com"
-                            required>
+                    <div class="select__column email">
+                        <label for="email">
+                            <span class="select-important">E-mail:</span>
+                            <input type="email" id="email" name="email" placeholder="кuklachev@gmail.com" required>
+                        </label>
+
                     </div>
-                    <div class="select__column">
-                        <label for="telephone" class="select-important">Телефон:</label>
-                        <input type="text" id="telephone" class="telephone" name="telephone"
-                            placeholder="8 (960) 900-60-90" required>
+                    <div class="select__column telephone">
+                        <label for="telephone">
+                            <span class="select-important">Телефон:</span>
+                            <input type="text" id="telephone" name="telephone" placeholder="8 (960) 900-60-90" required>
+                        </label>
+
                     </div>
                 </fieldset>
                 <fieldset class="select__fieldset-comment">
@@ -66,12 +69,13 @@
                     <legend> <span>Дополнительно</span> </legend>
                     <div class="select__row select__checkbox">
                         <label for="sweetener" class="checkbox-item">
-                            <input type="checkbox" id="sweetener" name="sweetener" value="sweetener"></input>
+                            <input type="checkbox" id="sweetener" name="sweetener" value="sweetener"
+                                checked="checked"></input>
                             <span class="checkbox-mark"></span>
                             <span class="select__checkbox-name">сахарозаменитель</span>
                         </label>
                         <label for="potable-water" class="checkbox-item">
-                            <input type="checkbox" id="potable-water" name="potable-water"
+                            <input type="checkbox" id="potable-water" disabled name="potable-water"
                                 value="potable-water"></input>
                             <span class="checkbox-mark"></span>
                             <span class="select__checkbox-name">питьевая вода</span>
@@ -88,7 +92,7 @@
                         </label>
                     </div>
                     <div class="select__row">
-                        <input type="submit" value="отправить заявку">
+                        <input type="submit" class="button-fade select__submit-button" value="отправить заявку">
                         <span>* — Обязательные поля</span>
                     </div>
                 </fieldset>

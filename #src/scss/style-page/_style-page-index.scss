@@ -867,11 +867,16 @@
     & fieldset {
         display: flex;
         padding-bottom: 70px;
-        gap: 80px;
 
         &:last-child {
             flex-direction: column;
+            padding-bottom: 0;
         }
+    }
+
+    &__fieldset-basic,
+    &__fieldset-contacts {
+        gap: 80px;
     }
 
     & legend {
@@ -911,6 +916,8 @@
         color: var(--special-dark-grey);
     }
 
+
+
     & label {
         margin-right: 20px;
     }
@@ -921,6 +928,47 @@
     & textarea {
         border: 1px solid #E7E7E7;
         padding: 10px 20px;
+    }
+
+    & input[type="email"] {
+        padding-right: 45px;
+    }
+
+    & input[type="text"],
+    & input[type="email"],
+    & input[type="number"] {
+        transition: 0.3s all ease;
+
+        &:invalid {
+            border: 1px solid var(--status-error);
+        }
+
+        &:required {
+            border: 1px solid #E7E7E7;
+        }
+
+    }
+
+    & input[type="number"],
+    & input[type="text"],
+    & input[type="email"],
+    & textarea {
+        transition: 0.3s all ease;
+
+        &:focus {
+            border: 1px solid var(--special-dark-grey);
+        }
+
+        &:hover {
+            border: 1px solid var(--special-grey);
+        }
+    }
+
+    & input {
+        &:disabled~span {
+            opacity: 0.3;
+            cursor: initial;
+        }
     }
 
     &__fieldset-basic {
@@ -1043,10 +1091,13 @@
     // .select__row
 
     &__row {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
         margin-bottom: 60px;
+
+        &.select__checkbox {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
 
         &:last-child {
             margin-bottom: 0;
@@ -1143,36 +1194,104 @@
 
     &__fieldset-contacts {
         & .select__column {
-            position: relative;
-
-            &::before {
-                position: absolute;
-                content: "";
-                top: 0;
-                // transform: translate(50%, 50%);
-                right: 0;
-                z-index: 10;
+            & label {
+                display: flex;
+                align-items: center;
             }
 
-            &:nth-child(1) {
-                &::before {
-                    background-image: url("../img/email-black.svg");
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    width: 19px;
-                    height: 10px;
+            & span {
+                flex-grow: 1;
+                margin-right: 20px;
+            }
+
+            & input {
+                flex-grow: 30;
+            }
+
+            &.email,
+            &.telephone {
+                & label {
+                    position: relative;
+
+                    &::after {
+                        position: absolute;
+                        content: "";
+                        top: 50%;
+                        transform: translate(50%, -50%);
+                        right: 30px;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                    }
                 }
             }
 
-            &:nth-child(2) {
-                &::before {
-                    background-image: url("../img/phone-black.svg");
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    width: 20px;
-                    height: 20px;
+            &.email {
+                & label {
+                    &::after {
+                        background-image: url("../img/email-black.svg");
+                        width: 19px;
+                        height: 13px;
+                    }
+
+                    &:focus {
+                        &::after {
+                            background-image: url("../img/email-green.svg");
+                        }
+                    }
+                }
+
+            }
+
+            &.telephone {
+                & label {
+                    &::after {
+                        background-image: url("../img/phone-black.svg");
+                        width: 20px;
+                        height: 20px;
+                    }
                 }
             }
         }
+
+        // & .email-icon,
+        // & .telephone-icon {
+        //     position: relative;
+
+        //     &::before {
+        //         position: absolute;
+        //         content: "";
+        //         top: 50%;
+        //         transform: translate(50%, -50%);
+        //         right: 30px;
+        //     }
+        // }
+
+        // & input {
+        //     &:focus {
+        //         &~.email-icon {
+        //             &::before {
+        //                 background-image: url("../img/email-green.svg");
+        //             }
+        //         }
+
+        //         &~.telephone-icon {
+        //             background-image: url("../img/phone-green.svg");
+        //         }
+        //     }
+        // }
+    }
+
+    &__submit-button {
+        font-family: "Oswald", sans-serif;
+        text-transform: uppercase;
+        align-items: center;
+        text-align: center;
+        font-size: 20px;
+        line-height: 1;
+        width: 570px;
+        height: 52px;
+        max-width: 100%;
+        margin-right: 80px;
+        cursor: pointer;
     }
 }
