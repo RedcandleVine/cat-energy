@@ -127,11 +127,11 @@
 }
 
 @media (max-width: 650px) {
-    .header.scrolled {
+    .header-second.scrolled {
         padding: 10px 0;
     }
 
-    .header {
+    .header-second {
         &__container {
             display: none;
         }
