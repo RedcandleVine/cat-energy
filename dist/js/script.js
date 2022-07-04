@@ -8,7 +8,7 @@ $(document).ready(function () {
     // Активация мобильного меню
 
     $("#menu").mmenu({
-        extensions: ["pagedim-black", "position-left"],
+        extensions: ["pagedim-black", "position-top"],
         navbar: {
             title: "<span>Cat</span> Energy",
         },
@@ -25,6 +25,7 @@ $(document).ready(function () {
     function closeMenu() {
         API.close();
     }
+
     $icon.on("click", openMenu);
     API.bind("open:finish", function () {
         $icon.addClass("is-active");

@@ -834,8 +834,6 @@
 
 .select {
 
-    // .select__wrapper
-
     &__wrapper {
         padding-top: 75px;
         padding-bottom: 85px;
@@ -917,8 +915,6 @@
         color: var(--special-dark-grey);
     }
 
-
-
     & label {
         margin-right: 20px;
     }
@@ -947,7 +943,6 @@
         &:required {
             border: 1px solid #E7E7E7;
         }
-
     }
 
     & input[type="number"],
@@ -1006,13 +1001,10 @@
         }
     }
 
-    // .select__column
-
     &__column {
         flex: 0 1 50%;
     }
 
-    // .select__item
     &__item {
         padding-bottom: 20px;
     }
@@ -1055,7 +1047,6 @@
                     position: absolute;
                     display: none;
                     transition: 0.3s all ease;
-
                 }
             }
 
@@ -1080,7 +1071,6 @@
                             background: var(--basic-green);
                         }
                     }
-
                 }
 
                 &:hover {
@@ -1089,7 +1079,6 @@
                     }
                 }
             }
-
         }
     }
 
@@ -1102,8 +1091,6 @@
         height: 175px;
         resize: none;
     }
-
-    // .select__row
 
     &__row {
         margin-bottom: 60px;
@@ -1150,7 +1137,6 @@
                     position: absolute;
                     display: none;
                     transition: 0.3s all ease;
-
                 }
             }
 
@@ -1176,7 +1162,6 @@
                             transform: rotate(45deg);
                         }
                     }
-
                 }
 
                 &:hover {
@@ -1185,7 +1170,6 @@
                     }
                 }
             }
-
         }
     }
 
@@ -1263,58 +1247,6 @@
                     }
                 }
             }
-
-
-
-            // &.email,
-            // &.telephone {
-            //     & label {
-            //         position: relative;
-
-            //         &::after {
-            //             position: absolute;
-            //             content: "";
-            //             top: 50%;
-            //             transform: translate(50%, -50%);
-            //             right: 30px;
-            //             background-position: center;
-            //             background-repeat: no-repeat;
-            //         }
-            //     }
-            // }
-
-            // &.email {
-            //     & label {
-            //         &::after {
-            //             background-image: url("../img/email-black.svg");
-            //             width: 19px;
-            //             height: 13px;
-            //         }
-
-            //         &:focus {
-            //             &::after {
-            //                 background-image: url("../img/email-green.svg");
-            //             }
-            //         }
-            //     }
-
-            // }
-
-            // &.telephone {
-            //     & label {
-            //         &::after {
-            //             background-image: url("../img/phone-black.svg");
-            //             width: 20px;
-            //             height: 20px;
-            //         }
-
-            //         &:focus {
-            //             &::after {
-            //                 background-image: url("../img/email-green.svg");
-            //             }
-            //         }
-            //     }
-            // }
         }
     }
 
@@ -1325,10 +1257,7 @@
         text-align: center;
         font-size: 20px;
         line-height: 1;
-        // width: 570px;
         height: 52px;
-        // max-width: 100%;
-        // margin-right: 80px;
         cursor: pointer;
     }
 }
@@ -1478,11 +1407,8 @@
                                 height: 19px;
                             }
                         }
-
                     }
-
                 }
-
             }
         }
 
@@ -1491,5 +1417,9 @@
             height: 40px;
         }
     }
+}
 
+:focus,
+:active {
+    outline: none;
 }

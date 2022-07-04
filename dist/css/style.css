@@ -1763,6 +1763,10 @@ h2 {
     font-size: 14px;
     height: 40px; } }
 
+:focus,
+:active {
+  outline: none; }
+
 .footer {
   background-color: var(--basic-grey);
   padding: 60px 0; }
