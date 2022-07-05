@@ -114,14 +114,14 @@
         display: none;
     }
 
-    .header .tablet-logo {
+    .header-second .tablet-logo {
         display: initial;
     }
 
 }
 
 @media (max-width: 1024px) {
-    .header.scrolled {
+    .header-second.scrolled {
         padding-top: 25px;
     }
 }

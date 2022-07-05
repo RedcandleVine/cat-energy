@@ -19,7 +19,10 @@
     &__socials-link {
         display: block;
         margin-right: 30px;
-        transition: 0.3s all ease;
+
+        & path {
+            transition: 0.3s all ease;
+        }
 
         &:last-child {
             margin-right: 0;
@@ -44,20 +47,20 @@
             }
         }
 
-        &:visited {
-            & path {
-                fill: var(--basic-green-dark);
-            }
-        }
+        // &:visited {
+        //     & path {
+        //         fill: var(--basic-green-dark);
+        //     }
+        // }
 
-        &:last-child {
-            &:visited {
-                & path {
-                    fill: none;
-                    stroke: var(--basic-green-dark);
-                }
-            }
-        }
+        // &:last-child {
+        //     &:visited {
+        //         & path {
+        //             fill: none;
+        //             stroke: var(--basic-green-dark);
+        //         }
+        //     }
+        // }
     }
 }
 
