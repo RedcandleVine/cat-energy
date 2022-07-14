@@ -79,7 +79,7 @@ h2 {
 .button-fade {
 	text-align: center;
 	text-transform: uppercase;
-	color: #FFFFFF;
+	color: var(--basic-white);
 	background-color: var(--basic-green);
 	transition: 0.3s all ease;
 
