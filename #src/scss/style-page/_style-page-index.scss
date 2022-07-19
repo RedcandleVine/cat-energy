@@ -1583,6 +1583,46 @@
             align-items: center;
         }
     }
+
+    &__more {
+        padding: 60px 40px 40px 40px;
+        border: 2px solid var(--basic-grey);
+
+        & .catalog__item-photo {
+            margin: 0 auto;
+        }
+
+        & .catalog__info-row {
+            border-bottom: none;
+            max-width: 170px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        & .catalog__item-wrapper {
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        & .catalog__item-button {
+            cursor: pointer;
+
+            & span {
+                display: block;
+                text-align: center;
+                text-transform: uppercase;
+                padding: 10px 10px;
+                font-family: 'Oswald', sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 125%;
+                align-items: center;
+                background-color: var(--basic-grey);
+            }
+        }
+    }
+
 }
 
 .additional {
@@ -2021,6 +2061,10 @@
         &__item {
             padding: 0 20px 20px 20px;
         }
+
+        &__more {
+            padding: 20px;
+        }
     }
 }
 
@@ -2053,7 +2097,8 @@
 
         // .catalog__item
 
-        &__item {
+        &__item,
+        &__more {
             padding: 20px 0 25px 0;
             background-color: var(--basic-white);
             position: relative;
@@ -2067,6 +2112,36 @@
                 width: 600px;
                 height: 1px;
                 border-bottom: 1px solid var(--special-grey);
+            }
+        }
+
+        &__more {
+            border: none;
+
+            & .catalog__item-wrapper {
+                display: flex;
+            }
+
+            & .catalog__item-photo {
+                img {
+                    width: 30px;
+                    height: auto;
+                }
+            }
+
+            & .catalog__item-title {
+                max-width: initial;
+                margin-top: 20px;
+            }
+
+            & .catalog__item-info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            & .catalog__info-row {
+                max-width: initial;
             }
         }
 
