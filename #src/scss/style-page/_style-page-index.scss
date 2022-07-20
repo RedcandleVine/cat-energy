@@ -1513,7 +1513,7 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        justify-content: end;
+        justify-content: space-between;
         flex-grow: 1;
     }
 
@@ -1521,13 +1521,22 @@
 
     &__item-photo {
         margin: -80px auto 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-grow: 1;
     }
 
     // .catalog__item-info
 
-    &__item-info {}
+    &__item-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 2;
+    }
 
-    // .catalog__info
+
 
     &__item-title {
         font-family: 'Oswald', sans-serif;
@@ -1538,10 +1547,10 @@
         text-align: center;
         text-transform: uppercase;
         color: var(--special-dark-grey-2);
-        max-width: 145px;
-        height: 50px;
-        margin: 40px auto 20px;
+        margin: 40px 0 20px;
     }
+
+    // .catalog__info
 
     &__info {}
 
@@ -1619,6 +1628,12 @@
                 line-height: 125%;
                 align-items: center;
                 background-color: var(--basic-grey);
+                transition: 0.3s all ease;
+
+                &:hover,
+                &:active {
+                    background-color: var(--special-grey);
+                }
             }
         }
     }
@@ -1644,7 +1659,7 @@
 
     & .advertisement {
         margin-top: 115px;
-        // background-color: rgba(104, 183, 56, 0.85);
+        background-color: var(--basic-green-transparent);
         position: relative;
         display: flex;
         flex-direction: column;
@@ -1663,20 +1678,20 @@
             left: 0;
             height: 100%;
             width: 100%;
-            z-index: -2;
-
-        }
-
-        &::after {
-            position: absolute;
-            content: "";
-            background-color: var(--basic-green-transparent);
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
             z-index: -1;
+
         }
+
+        // &::after {
+        //     position: absolute;
+        //     content: "";
+        //     background-color: var(--basic-green-transparent);
+        //     top: 0;
+        //     left: 0;
+        //     height: 100%;
+        //     width: 100%;
+        //     z-index: -1;
+        // }
     }
 
     &__title {
@@ -2130,7 +2145,6 @@
             }
 
             & .catalog__item-title {
-                max-width: initial;
                 margin-top: 20px;
             }
 
@@ -2171,9 +2185,7 @@
         // .catalog__item-title
 
         &__item-title {
-            max-width: 80px;
-            max-height: 50px;
-            height: initial;
+            max-width: 100%;
             font-size: 16px;
             line-height: 125%;
             text-align: initial;
